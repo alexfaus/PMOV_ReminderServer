@@ -14,13 +14,12 @@ Instrucciones de uso Git para usuarios de Windows
 
 Información el proyecto
 -----------------------
-  Proyecto creado con Maven
-  Estructura organizativa: org.pmov.reminderapp.server
-
-  Cliente: Android
-  Servidor: Java + SQLlite (Base de Datos)
+  + Proyecto creado con Maven
+  + Estructura organizativa: org.pmov.reminderapp.server
+  + Cliente: Android
+  + Servidor: Java + SQLlite (Base de Datos)
 
 Autores
 -------
-  Esteban García Ballesta
-  ** Añadete como autor **
+  + Esteban García Ballesta
+  + ** Añádete como autor **
