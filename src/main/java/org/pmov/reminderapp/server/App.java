@@ -6,28 +6,28 @@ import java.net.Socket;
 
 public class App 
 {
-	// Variable final con el número de PUERTO de comunicaciones
+//	Variable final con el número de PUERTO de comunicaciones
 	public static final int PUERTO = 1234;
 	
     public static void main( String[] args ) throws IOException
     {
-    	// Declaro un ServerSocket y un Socket
+//    	Declaro un ServerSocket y un Socket
         ServerSocket socketServidor;
         Socket socketConectado;
         
-        // Nuevo ServerSocket
+//      Nuevo ServerSocket
         socketServidor = new ServerSocket(PUERTO);
         
-        // Creamos un while para estar leyendo las conexiones que puedan hacerse
+//      Creamos un while para estar leyendo las conexiones que puedan hacerse
         while(true)
         {
-        	// Acepto una conexión y espero
+//        	Acepto una conexión y espero
         	socketConectado = socketServidor.accept();
         	
-        	// Mostramos mensaje de quién se ha conectado
-        	// ++ CODE HERE ++
+//        	Mostramos mensaje de quién se ha conectado
+//        	++ CODE HERE ++
         	
-        	// Creamos un nuevo hilo
+//        	Creamos un nuevo hilo
         	new HiloServidor(socketConectado);
         }
     }

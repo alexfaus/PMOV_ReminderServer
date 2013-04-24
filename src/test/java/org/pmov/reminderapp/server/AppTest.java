@@ -20,7 +20,7 @@ public class AppTest
     
     public static Test suite()
     {
-    	// Creamos un thread
+//    	Creamos un thread
     	Thread th = new Thread(new Runnable()
     	{
     		public void run()
