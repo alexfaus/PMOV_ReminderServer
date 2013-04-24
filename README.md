@@ -14,7 +14,7 @@ Instrucciones de uso Git para usuarios de Windows
   + Esto es un pequeño guiado para poder empezar y no calentarse mucho el coco ;)
   
 
-Información el proyecto
+Información del proyecto
 -----------------------
   + Proyecto creado con Maven
   + Estructura organizativa: org.pmov.reminderapp.server
