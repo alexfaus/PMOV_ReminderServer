@@ -5,11 +5,13 @@ UPV EPSG > Programación de Dispositivos Móviles 2012-2013
 
 Instrucciones de uso Git para usuarios de Windows
 -------------------------------------------------
-  1. Descargamos Git http://git-scm.com/download/win e instalamos.
-  2. Abrimos Terminal (Símbolo del sistema).
-  3. Usando el comando cd nos posicionamos en nuestra carpeta local donde queremos trabajar.
-  4. Creamos las referencias de Git utilizando el comando >> git init
-  5. Clonamos el repositorio remoto a nuestro repositorio local con el comando >> git clone
+  1. Creamos una cuenta en https://github.com/
+  2. Descargamos el cliente para escritorio e instalamos
+  3. Añadimos un repositorio remoto, en este caso https://github.com/esgarbal/PMOV_ReminderServer.git
+  4. Clonamos el repositorio remoto en local utilizando el botón 'Clone in Windows' o utilizando los comandos Git, a gusto de cada cuál.
+  5. Y por último leer el manual de GitHub para conocer su funcionamiento.
+  
+  + Esto es un pequeño guiado para poder empezar y no calentarse mucho el coco ;)
   
 
 Información el proyecto
