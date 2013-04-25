@@ -50,11 +50,24 @@ public class AppTest
 		salida = elSocket.getOutputStream();
 		entrada = elSocket.getInputStream();
 		
-		IO.escribeLinea("POST ordenesEnviadas", salida);
+//		Mensaje que enviamos al servidor
+		String mensajeEnviado = "DELETE hola que tal";
 		
+//		Consulta que enviamos al servidor
+		System.out.println("" +
+				"+----------------------+\n" +
+				"| Consulta al servidor |> " + mensajeEnviado + "\n" +
+				"+----------------------+");
+		IO.escribeLinea(mensajeEnviado, salida);
+		
+//		Datos recibidos del servidor
 		String mensajeRecibido = IO.leeLinea(entrada);
-		System.out.println(mensajeRecibido);
+		System.out.println("" +
+				"+----------------------+\n" +
+				"| Mensaje del servidor |> " + mensajeRecibido + "\n" +
+				"+----------------------+");
 		
+//		Cerramos flujos y socket
 		salida.close();
 		entrada.close();
 		elSocket.close();

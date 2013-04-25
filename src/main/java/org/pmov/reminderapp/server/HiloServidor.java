@@ -15,6 +15,9 @@ public class HiloServidor implements Runnable
 	
 //	Stream de envío
 	private OutputStream salida;
+	
+//	Mensaje confirmación base datos > ok
+	private String mensajeConfirmacion = "PROBLEMAS";
 
 	public HiloServidor(Socket con) throws java.io.IOException
 	{
@@ -37,14 +40,28 @@ public class HiloServidor implements Runnable
 			String mensajeRecibidoSinTrocear = IO.leeLinea(entrada);
 			
 //			Troceamos la línea con split()
-			String[] mensajeRecibidoTroceado = mensajeRecibidoSinTrocear.split(" ");
-			
-//			Comprobamos el troceado
-			System.out.println("Trozo 0: " + mensajeRecibidoTroceado[0]);
-			System.out.println("Trozo 1: " + mensajeRecibidoTroceado[1]);
+			String[] mensajeRecibidoTroceado = mensajeRecibidoSinTrocear.split("\\s",2);
+
+//			Clasificamos los mensajes recibidos y llamamos a los métodos
+			if(mensajeRecibidoTroceado[0].equals("POST"))
+			{
+				mensajeConfirmacion = MetodosBD.metodoPOST(mensajeRecibidoTroceado[1]);
+			}
+			else if(mensajeRecibidoTroceado[0].equals("GET"))
+			{
+				mensajeConfirmacion = MetodosBD.metodoGET(mensajeRecibidoTroceado[1]);
+			}
+			else if(mensajeRecibidoTroceado[0].equals("PUT"))
+			{
+				mensajeConfirmacion = MetodosBD.metodoPUT(mensajeRecibidoTroceado[1]);
+			}
+			else if(mensajeRecibidoTroceado[0].equals("DELETE"))
+			{
+				mensajeConfirmacion = MetodosBD.metodoDELETE(mensajeRecibidoTroceado[1]);
+			}
 			
 //			Mandamos un mensaje al cliente como mensaje recibido
-			IO.escribeLinea("Mensaje recibido", salida);
+			IO.escribeLinea(mensajeConfirmacion, salida);
 			
 //			Cerramos los flujos
 			entrada.close();
@@ -60,5 +77,5 @@ public class HiloServidor implements Runnable
 		{
 			e.printStackTrace();
 		}
-	}	
+	}
 }
