@@ -24,4 +24,5 @@ Información del proyecto
 Autores
 -------
   + Esteban García Ballesta
+  + Pepito Puntasso
   + ** Añádete como autor **
