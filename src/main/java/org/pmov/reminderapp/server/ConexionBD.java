@@ -1,4 +1,4 @@
-package org.puntasso;
+package org.pmov.reminderapp.server;
 public class ConexionBD implements RecordatorioInterfaz {
 	
 	public String metodoPOST(String argumentos){

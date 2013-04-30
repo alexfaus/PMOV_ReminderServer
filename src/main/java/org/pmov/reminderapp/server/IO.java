@@ -1,4 +1,4 @@
-package org.puntasso;
+package org.pmov.reminderapp.server;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

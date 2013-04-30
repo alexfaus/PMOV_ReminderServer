@@ -1,4 +1,4 @@
-package org.puntasso;
+package org.pmov.reminderapp.server;
 
 public interface RecordatorioInterfaz {
 	public String metodoPOST(String argumentos);
