@@ -5,4 +5,4 @@ USE recordatorio;
 
 CREATE TABLE usuario (fecha CHAR(20) NOT NULL, asunto CHAR(120) NOT NULL);
 
-GRANT ALL ON recordatorio.usuario1 TO 'testuser'@'localhost';
+GRANT ALL ON recordatorio.usuario TO 'testuser'@'localhost';
