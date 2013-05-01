@@ -5,8 +5,6 @@ public interface RecordatorioInterfaz {
 	
 	public String metodoGET(String argumentos);
 	
-	public String metodoPUT(String argumentos);
-	
 	public String metodoDELETE(String argumentos);
 	
 }

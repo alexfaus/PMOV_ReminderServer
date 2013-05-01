@@ -54,11 +54,6 @@ public class HiloServidor implements Runnable {
 				mensajeConfirmacion = a_la_BD
 						.metodoGET(mensajeRecibidoTroceado[1]);
 
-			} else if (mensajeRecibidoTroceado[0].equals("PUT")) {
-
-				mensajeConfirmacion = a_la_BD
-						.metodoPUT(mensajeRecibidoTroceado[1]);
-
 			} else if (mensajeRecibidoTroceado[0].equals("DELETE")) {
 
 				mensajeConfirmacion = a_la_BD

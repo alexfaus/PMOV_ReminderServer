@@ -97,10 +97,6 @@ public class ConexionBD implements RecordatorioInterfaz {
 		return leido;
 	}
 
-	public String metodoPUT(String argumentos) {
-		return "OK PUT CON CONSULTA > " + argumentos;
-	}
-
 	public String metodoDELETE(String argumentos) {
 		return "OK DELETE CON CONSULTA > " + argumentos;
 	}
