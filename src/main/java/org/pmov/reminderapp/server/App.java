@@ -21,12 +21,13 @@ public class App {
         while(true){
         	// Acepto una conexión y espero
         	socketConectado = socketServidor.accept();
-        	
+        	        	
         	// Mostramos mensaje de quién se ha conectado
         	// ++ CODE HERE ++
         	
         	// Creamos un nuevo hilo
         	new HiloServidor(socketConectado, a_la_BD);
+        	
         }        
     }
 }

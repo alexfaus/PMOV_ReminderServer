@@ -1,0 +1,8 @@
+CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'test123';
+
+CREATE DATABASE recordatorio;
+USE recordatorio;
+
+CREATE TABLE usuario (fecha CHAR(20) NOT NULL, asunto CHAR(120) NOT NULL);
+
+GRANT ALL ON recordatorio.usuario TO 'testuser'@'localhost';
