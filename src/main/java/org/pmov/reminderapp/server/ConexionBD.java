@@ -1,7 +1,6 @@
 package org.pmov.reminderapp.server;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,8 +15,10 @@ public class ConexionBD implements RecordatorioInterfaz {
 	private DataSource dataSource = null;
 
 	public ConexionBD() {
-		// Creamos un POOL de conexiones, varios metodos pueden tener conexion a la vez
-		// cuando terminan la conexion .close() y la dejan libre para otro metodo.
+		// Creamos un POOL de conexiones, varios metodos pueden tener conexion a
+		// la vez
+		// cuando terminan la conexion .close() y la dejan libre para otro
+		// metodo.
 		// Se puede configurar el numero de conex. entre otras cosas
 		// http://www.chuidiang.com/java/mysql/BasicDataSource-Pool-Conexiones.php
 		BasicDataSource basicDataSource = new BasicDataSource();
