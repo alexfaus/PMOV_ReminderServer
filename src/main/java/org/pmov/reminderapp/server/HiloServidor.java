@@ -46,7 +46,7 @@ public class HiloServidor implements Runnable {
 			// Clasificamos los mensajes recibidos y llamamos a los métodos
 			if (mensajeRecibidoTroceado[0].equals("POST")) {
 
-				a_la_BD.metodoPOST(mensajeRecibidoTroceado[1],
+				mensajeConfirmacion = a_la_BD.metodoPOST(mensajeRecibidoTroceado[1],
 						mensajeRecibidoTroceado[2]);
 
 			} else if (mensajeRecibidoTroceado[0].equals("GET")) {
@@ -75,7 +75,6 @@ public class HiloServidor implements Runnable {
 
 			// Cerramos el Socket
 			elSocket.close();
-			a_la_BD.CerrarConexion();
 			// Terminamos
 			return;
 

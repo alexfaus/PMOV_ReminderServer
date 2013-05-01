@@ -44,7 +44,8 @@ public class AppTest extends TestCase {
      * Rigourous Test :-)
      */
     public void testApp() throws UnknownHostException, IOException {
-    	//probamosPOST(); // Creamos entrada en la tabla (tiene que devolver OK?)
+    	probamosPOST(); // Creamos entrada en la tabla (tiene que devolver OK?)
+    	for(int i=0;i<9999;i++);
     	probamosGET(); // Leemos la entrada anterior
     }
     
@@ -59,7 +60,7 @@ public class AppTest extends TestCase {
 		salida = elSocket.getOutputStream();
 		entrada = elSocket.getInputStream();
 		
-		String mensajeEnviado = "GET 2013-04-31";
+		String mensajeEnviado = "GET 2014-01-01";
 		// Consulta que enviamos al servidor
 		System.out.println("" +
 				"+----------------------+\n" +
@@ -91,14 +92,14 @@ public class AppTest extends TestCase {
 		salida = elSocket.getOutputStream();
 		entrada = elSocket.getInputStream();
 		
-		String mensajeEnviado = "POST 2013-01-31 Holaaaa";
+		String mensajeEnviado = "POST 2014-01-01 Nos quedan 4 meses para terminar la carrera.";
 		// Consulta que enviamos al servidor
 		System.out.println("" +
 				"+----------------------+\n" +
 				"| Consulta al servidor |> " + mensajeEnviado + "\n" +
 				"+----------------------+");
 		IO.escribeLinea(mensajeEnviado, salida);
-		
+
 		// Datos recibidos del servidor
 		String mensajeRecibido = IO.leeLinea(entrada);
 		System.out.println("" +

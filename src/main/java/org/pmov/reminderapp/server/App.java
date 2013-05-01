@@ -15,20 +15,19 @@ public class App {
         
         // Nuevo ServerSocket
         socketServidor = new ServerSocket(PUERTO);
-                
+        a_la_BD = new ConexionBD();
+        
         // Creamos un while para estar leyendo las conexiones que puedan hacerse
         while(true){
         	// Acepto una conexión y espero
         	socketConectado = socketServidor.accept();
-        	a_la_BD = new ConexionBD();
-        	
+        	        	
         	// Mostramos mensaje de quién se ha conectado
         	// ++ CODE HERE ++
         	
         	// Creamos un nuevo hilo
         	new HiloServidor(socketConectado, a_la_BD);
         	
-        	a_la_BD.CerrarConexion();
         }        
     }
 }
