@@ -13,7 +13,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 public class ConexionBD implements RecordatorioInterfaz {
 
 	// Esta variable es para guardar el POOL de conexiones de manera global
-	DataSource dataSource = null;
+	private DataSource dataSource = null;
 
 	public ConexionBD() {
 		// Creamos un POOL de conexiones, varios metodos pueden tener conexion a la vez
