@@ -57,7 +57,7 @@ public class HiloServidor implements Runnable {
 			} else if (mensajeRecibidoTroceado[0].equals("DELETE")) {
 
 				mensajeConfirmacion = a_la_BD
-						.metodoDELETE(mensajeRecibidoTroceado[1]);
+						.metodoDELETE(mensajeRecibidoTroceado[1],mensajeRecibidoTroceado[2]);
 
 			}
 

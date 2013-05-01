@@ -97,7 +97,33 @@ public class ConexionBD implements RecordatorioInterfaz {
 		return leido;
 	}
 
-	public String metodoDELETE(String argumentos) {
-		return "OK DELETE CON CONSULTA > " + argumentos;
+	public synchronized String metodoDELETE(String fecha, String asunto) {
+		Connection con = null;
+		PreparedStatement pst = null;
+		System.out.print("Borramos: " + asunto + "\n");
+		try {
+
+			con = dataSource.getConnection();
+
+			pst = con
+					.prepareStatement("DELETE FROM usuario WHERE fecha =? AND asunto = ?");
+			pst.setString(1, fecha);
+			pst.setString(2, asunto);
+			pst.executeUpdate();
+
+		} catch (SQLException ex) {
+			// Aqui poner que pasa en caso de error
+		} finally {
+			try {
+				if (pst != null)
+					pst.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException ex) {
+				// Aqui poner que pasa en caso de error
+			}
+		}
+
+		return "OK";
 	}
 }
