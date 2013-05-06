@@ -62,9 +62,7 @@ use reminderapp;
 	
 create table recordatorio (
 	id int(6) primary key auto_increment,
-	usuario_log char(10),
 	asunto char(100),
-	alarma_activada boolean,
 	fecha_alarma date,
 	hora_alarma time,
 	fecha_creacion timestamp
