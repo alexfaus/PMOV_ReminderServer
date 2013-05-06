@@ -72,10 +72,10 @@ create table recordatorio (
 	collate = latin1_general_ci;
 
 insert into recordatorio
-	(usuario_log,asunto,alarma_activada,fecha_alarma,hora_alarma) values
-	('esgarbal','Hola #1',true,'2013-05-10','22:00:00'),
-	('esgarbal','Hola #2',false,'2013-06-10','22:10:00'),
-	('juanito','Hola #1',true,'2013-10-10','10:30:00');
+	(asunto,fecha_alarma,hora_alarma) values
+	('Asunto #1','2013-05-10','22:00:00'),
+	('Asunto #2','2013-06-10','22:10:00'),
+	('Asunto #1','2013-10-10','10:30:00');
 
 select * from recordatorio;
 
