@@ -1,11 +1,11 @@
 /*
-Fichero de creación de la base de datos
+Fichero de creacion de la base de datos
 =======================================
   
 	--
-	(PRIMERO DE TODO):	LA FORMA MÁS SENCILLA DE OBTENER UN SERVIDOR MYSQL ES
+	(PRIMERO DE TODO):	LA FORMA MAS SENCILLA DE OBTENER UN SERVIDOR MYSQL ES
 				INSTALAR XAMPP YA QUE VIENE CON APACHE, MYSQL Y TOMCAT.
-				PODRÁS INTERACTUAR CON MYSQL DE FORMA VISUAL MEDIANTE WEB.
+				PODRAS INTERACTUAR CON MYSQL DE FORMA VISUAL MEDIANTE WEB.
 	--
 	(PASO 1): 	Tienes que acceder desde consola o utilizando PHPMyAdmin de XAMPP y acceder
 			como root, para acceder como administrador y poder crear el usuario.
@@ -20,7 +20,7 @@ Fichero de creación de la base de datos
 					todos los privilegios en las bases de datos de los usuarios
 					se guardan en el servidor MySQL y no en la propia base de datos
 					'reminderapp'.
-					Así pues con ejecutar una única vez los comandos del (PASO 1) bastará.
+					Así pues con ejecutar una unica vez los comandos del (PASO 1) bastará.
 				
 			*NOTA:	Podemos usar el usuario root aunque aconsejo crear el usuario
 				'usureminder' para no comprometer la seguridad de las otras bases de datos
@@ -31,8 +31,8 @@ Fichero de creación de la base de datos
 				
 			*IMPORTANTE:	Si cargamos el *.sql desde PHPMyAdmin debemos tener cuidado con
 			el 'Conjunto de caracteres del archivo', debemos seleccionar x-user-defined que quiere
-			decir que se seleccionará el tipo de caracteres según lo definido dentro del *.sql.
-			Si copias el código desde consola esto no te debe preocupar.
+			decir que se seleccionara el tipo de caracteres segun lo definido dentro del *.sql.
+			Si copias el codigo desde consola esto no te debe preocupar.
 	--
 	
 */
